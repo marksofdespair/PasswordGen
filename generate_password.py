@@ -43,7 +43,7 @@ def main():
         )
         print("Generated Password:", password)
 
-        # Copies to clipboard if requested, makes use of pyperclip - install using pip install pyperclip if testing
+        # Copies to clipboard if requested, makes use of pyperclip - install using 'pip install pyperclip' if testing
         if args.clipboard:
             pyperclip.copy(password)
             pring("Password has been copied to your clipboard.")

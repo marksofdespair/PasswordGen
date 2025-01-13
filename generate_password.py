@@ -46,3 +46,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# first run generated passwords like _#L15sXHlwo<, 

@@ -1,6 +1,7 @@
 import random
 import string
 import argparse
+import pyperclip
 
 def generate_password(length=12, use_uppercase=True, use_numbers=True, use_symbols=True):
     # Defines character pools
@@ -41,6 +42,11 @@ def main():
             use_symbols=not args.no_symbols,
         )
         print("Generated Password:", password)
+
+        # Copies to clipboard if requested, makes use of pyperclip - install using pip install pyperclip if testing
+        if args.clipboard:
+            pyperclip.copy(password)
+            pring("Password has been copied to your clipboard.")
     except ValueError as e:
         print("Error:", e)
 
